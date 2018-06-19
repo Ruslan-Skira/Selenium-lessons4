@@ -1,13 +1,12 @@
 package com.academy.automation.practice.ddt.manager.helper;
 
 import com.academy.automation.practice.ddt.manager.model.AddressData;
+import com.academy.automation.practice.ddt.manager.model.Addresses;
 import com.academy.automation.practice.ddt.manager.page.AddressPage;
 import com.academy.automation.practice.ddt.manager.page.FormAddressPage;
 import org.openqa.selenium.WebDriver;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class AddressHelper {
 
@@ -29,9 +28,9 @@ public class AddressHelper {
                 .acceptDeletion();
     }
 
-    public Set<AddressData> all() {
+    public Addresses all() {
 
-        Set<AddressData> addressList  = new HashSet<>();
+        Addresses addressList  = new Addresses();
 
         List<String> firstNames = new AddressPage(driver).getFirstNameList();
         List<String> lastNames = new AddressPage(driver).getLastNameList();

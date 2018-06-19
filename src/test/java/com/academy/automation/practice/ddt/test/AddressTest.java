@@ -39,7 +39,7 @@ public class AddressTest extends BaseTest {
         // verify
         List<AddressData> afterListAddr = manager.address().getAddresses();
         Assert.assertEquals(afterListAddr.size(), beforeListAddr.size()+1);
-        beforeListAddr.add(addressData);
+        beforeListAddr.add(addressData.withAddressAlias(addressData.getAlias().toUpperCase()));
         Assert.assertEquals(new HashSet<>(beforeListAddr), new HashSet<>(afterListAddr));
     }
 }

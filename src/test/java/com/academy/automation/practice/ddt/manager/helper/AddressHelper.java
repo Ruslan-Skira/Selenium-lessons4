@@ -5,8 +5,9 @@ import com.academy.automation.practice.ddt.manager.page.AddressPage;
 import com.academy.automation.practice.ddt.manager.page.FormAddressPage;
 import org.openqa.selenium.WebDriver;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class AddressHelper {
 
@@ -28,9 +29,9 @@ public class AddressHelper {
                 .acceptDeletion();
     }
 
-    public List<AddressData> all() {
+    public Set<AddressData> all() {
 
-        List<AddressData> addressList  = new ArrayList<>();
+        Set<AddressData> addressList  = new HashSet<>();
 
         List<String> firstNames = new AddressPage(driver).getFirstNameList();
         List<String> lastNames = new AddressPage(driver).getLastNameList();

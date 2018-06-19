@@ -30,18 +30,14 @@ public class AddressTest extends BaseTest {
             manager.address().removeAddress(addressData.getAlias());
         }
 
-//        int before = manager.address().getCountAddresses();
-//        List<AddressData> beforeListAddr = manager.address().getAddresses();
-//
-//        manager.address().initCreationAddress();
-//        manager.address().fillAddressForm(addressData);
-//        manager.address().submitAddress();
-//
-//        // verify
-//        int after = manager.address().getCountAddresses();
-//        List<AddressData> afterListAddr = manager.address().getAddresses();
-//        Assert.assertEquals(afterListAddr.size(), beforeListAddr.size()+1);
-//        beforeListAddr.add(addressData.withAddressAlias(addressData.getAddressAlias().toUpperCase()));
-//        Assert.assertEquals(beforeListAddr, afterListAddr);
+        List<AddressData> beforeListAddr = manager.address().getAddresses();
+
+        manager.address().create(addressData);
+
+        // verify
+        List<AddressData> afterListAddr = manager.address().getAddresses();
+        Assert.assertEquals(afterListAddr.size(), beforeListAddr.size()+1);
+        beforeListAddr.add(addressData);
+        Assert.assertEquals(beforeListAddr, afterListAddr);
     }
 }

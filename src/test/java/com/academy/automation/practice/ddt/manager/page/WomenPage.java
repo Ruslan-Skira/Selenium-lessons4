@@ -14,7 +14,6 @@ public class WomenPage extends BasePage {
 
     public WomenPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
     }
     public String getWomenCapture() {
         return womenCaptureElement.getText().trim();

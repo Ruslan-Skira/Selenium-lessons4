@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="selenium">
-    <test name="menu">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="com.academy.automation.practice.ddt.test.LoginTests" />
-        </classes>
-    </test>
+<test name="menu">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+        <class name="com.academy.automation.practice.ddt.test.LoginTests" />
+    </classes>
+</test>
 </suite>

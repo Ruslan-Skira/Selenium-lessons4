@@ -29,7 +29,7 @@ public class LoginTests extends BaseTest {
         manager.session().logout();
     }
 
-    @Test(groups = {"login", "provider"}, dataProvider = "xmlProvider")
+    @Test(groups = {"login", "provider"}, dataProvider = "excelProvider")
     public void testIncorrectLogin(String login, String password, String expectedMessage) {
         manager.goTo().home();
         manager.session().tryLogin(login, password);

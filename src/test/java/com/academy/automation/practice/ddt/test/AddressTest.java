@@ -11,20 +11,21 @@ public class AddressTest extends BaseTest {
     @Test
     // TODO
     public void testAddAddress() {
-//        AddressData addressData = new AddressData()
-//                .withFirstName("Kolya")
-//                .withLastName("Ivanov")
-//                .withAddress("Petrovskogo st. 35")
-//                .withCity("Kharkov")
-//                .withState("Alaska")
-//                .withZipCode("61033")
-//                .withCountry("United States")
-//                .withHomePhone("+3809353613437")
-//                .withMobilePhone("093234567")
-//                .withAddressAlias("addressRef");
+        AddressData addressData = new AddressData()
+                .withFirstName("Kolya")
+                .withLastName("Ivanov")
+                .withAddress("Petrovskogo st. 35")
+                .withCity("Kharkov")
+                .withState("Alaska")
+                .withZipCode("61033")
+                .withCountry("United States")
+                .withHomePhone("+3809353613437")
+                .withMobilePhone("093234567")
+                .withAddressAlias("addressRef");
 
-//        manager.session().login();
-//        manager.goTo().addess();
+        manager.goTo().home();
+        manager.session().login();
+        manager.goTo().address();
 //        if (manager.address().isPresentAlias(addressData.getAddressAlias())) {
 //            manager.address().removeAddress(addressData.getAddressAlias());
 //        }

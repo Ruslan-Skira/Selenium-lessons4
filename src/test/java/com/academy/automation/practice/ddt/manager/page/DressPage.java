@@ -15,7 +15,6 @@ public class DressPage extends  BasePage{
 
     public DressPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
     }
 
     public String getFirstPrice() {

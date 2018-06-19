@@ -16,9 +16,11 @@ public class MyAccountPage extends BasePage {
     @FindBy(css="#header > div.nav > div > div > nav > div:nth-child(1) > a > span")
     private WebElement userNameLink;
 
+    @FindBy(css="#center_column > div > div:nth-child(1) > ul > li:nth-child(3) > a")
+    private WebElement myAddressLink;
+
     public MyAccountPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
     }
 
     public String getLoginCapture() {
@@ -34,4 +36,8 @@ public class MyAccountPage extends BasePage {
         return userNameLink.getText().trim();
     }
 
+    public AddressPage clickAddress() {
+        myAddressLink.click();
+        return new AddressPage(driver);
+    }
 }

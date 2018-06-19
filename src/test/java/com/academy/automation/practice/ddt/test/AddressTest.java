@@ -26,10 +26,10 @@ public class AddressTest extends BaseTest {
         manager.goTo().home();
         manager.session().login();
         manager.goTo().address();
-//        if (manager.address().isPresentAlias(addressData.getAddressAlias())) {
-//            manager.address().removeAddress(addressData.getAddressAlias());
-//        }
-//
+        if (manager.address().isPresentAlias(addressData.getAlias())) {
+            manager.address().removeAddress(addressData.getAlias());
+        }
+
 //        int before = manager.address().getCountAddresses();
 //        List<AddressData> beforeListAddr = manager.address().getAddresses();
 //

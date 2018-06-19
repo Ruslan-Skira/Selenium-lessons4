@@ -40,8 +40,9 @@ public class PrepareJsonXML {
     private static void prepareXML(String path, List<LoginData> data) {
         XStream xStream = new XStream();
         xStream.processAnnotations(LoginData.class);
+        String xml = xStream.toXML(data);
+
         try (Writer writer = new FileWriter(new File(path))) {
-            String xml = xStream.toXML(data);
             writer.write(xml);
         } catch (IOException exc) {
             exc.printStackTrace();

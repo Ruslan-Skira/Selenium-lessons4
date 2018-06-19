@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -22,17 +21,17 @@ public class AddressTest extends BaseTest {
     @Test(dataProvider = "creationAddress")
     public void testAddAddress(AddressData address) {
         if (manager.address().isPresentAlias(address.getAlias())) {
-            manager.address().removeAddress(address.getAlias());
+            manager.address().remove(address.getAlias());
         }
 
-        List<AddressData> beforeListAddr = manager.address().getAddresses();
+        List<AddressData> before = manager.address().all();
         manager.address().create(address);
 
         // verify
-        List<AddressData> afterListAddr = manager.address().getAddresses();
-        Assert.assertEquals(afterListAddr.size(), beforeListAddr.size()+1);
-        beforeListAddr.add(address.withAddressAlias(address.getAlias().toUpperCase()));
-        Assert.assertEquals(new HashSet<>(beforeListAddr), new HashSet<>(afterListAddr));
+        List<AddressData> after = manager.address().all();
+        Assert.assertEquals(after.size(), before.size()+1);
+        before.add(address.withAddressAlias(address.getAlias().toUpperCase()));
+        Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
     }
 
     @DataProvider(name="creationAddress")

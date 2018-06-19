@@ -2,12 +2,12 @@ package com.academy.automation.practice.ddt.test;
 
 import com.academy.automation.practice.ddt.manager.model.AddressData;
 import com.academy.automation.practice.ddt.manager.model.Addresses;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Set;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class AddressTest extends BaseTest {
 
@@ -29,8 +29,8 @@ public class AddressTest extends BaseTest {
 
         // verify
         Addresses after = manager.address().all();
-        Assert.assertEquals(after.size(), before.size()+1);
-        Assert.assertEquals(after, before.withAdded(address.withUpperCaseAlias()));
+        assertThat(after.size(), equalTo(before.size()+1));
+        assertThat(after, equalTo(before.withAdded(address.withUpperCaseAlias())));
     }
 
     @DataProvider(name="creationAddress")

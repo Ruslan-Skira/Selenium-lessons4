@@ -63,7 +63,7 @@ public class AddressPage extends BasePage {
     }
 
     public AddressPage acceptDeletion() {
-        driver.switchTo().alert().accept();
+        alertAccept(true);
         return new AddressPage(driver);
     }
 

@@ -34,6 +34,17 @@ public class BasePage {
         new Select(sortBySelect).selectByVisibleText(text);
     }
 
+    protected  void alertAccept(boolean accept) {
+        try {
+            if (accept)
+                driver.switchTo().alert().accept();
+            else
+                driver.switchTo().alert().dismiss();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public boolean waitForJSandJQueryToLoad() {
 
         WebDriverWait wait = new WebDriverWait(driver, 30);

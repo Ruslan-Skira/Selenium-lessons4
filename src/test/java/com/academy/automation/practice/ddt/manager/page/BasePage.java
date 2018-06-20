@@ -20,9 +20,11 @@ public class BasePage {
     }
 
     protected void inputTextField(WebElement element, String value) {
-        element.click();
-        element.clear();
-        element.sendKeys(value);
+        if (value != null) {
+            element.click();
+            element.clear();
+            element.sendKeys(value);
+        }
     }
 
     protected void selectByText(WebElement sortBySelect, String text) {

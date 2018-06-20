@@ -17,6 +17,7 @@ public class NavigationHelper {
         driver.get(baseUrl);
     }
 
+    // TODO check if current page isn't address page
     public void address() {
         new MyAccountPage(driver)
                 .clickAddress();

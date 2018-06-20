@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AddressPage extends BasePage {
@@ -42,6 +41,9 @@ public class AddressPage extends BasePage {
 
     @FindBy(css="#center_column > div.addresses > div ul > li:nth-child(8) > span")
     private List<WebElement> mobilePhoneElements;
+
+    @FindBy(xpath = "//*[@id='center_column']/div[1]/div[contains(@class,'bloc_adresses')]/div[contains(@class,'address')]")
+    private List<WebElement> blockAddresses;
 
     private String deleteAddressByAliasXPath = "//div[@id='center_column']/div[@class='addresses']//ul[li/h3[text()='%s']]//li[last()]/a[2]";
 
@@ -110,5 +112,9 @@ public class AddressPage extends BasePage {
 
     public List<String> getAddressAliasList() {
         return extractTextFromElements(addressAliasElements);
+    }
+
+    public int countAddresses() {
+        return blockAddresses.size();
     }
 }

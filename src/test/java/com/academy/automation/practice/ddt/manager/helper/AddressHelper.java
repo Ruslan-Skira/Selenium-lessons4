@@ -65,6 +65,10 @@ public class AddressHelper {
         return addressesCache;
     }
 
+    public int count() {
+        return new AddressPage(driver).countAddresses();
+    }
+
     public void create(AddressData address) {
         addressesCache = null;
         initCreation();

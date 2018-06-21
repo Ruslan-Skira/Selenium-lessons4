@@ -46,6 +46,7 @@ public class TestManager {
         }
 
         driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT, TimeUnit.SECONDS);
+        // driver.manage().timeouts().setScriptTimeout(DEFAULT_WAIT, TimeUnit.SECONDS);
         //        driver.manage().window().maximize();
 
         navigationHelper = new NavigationHelper(driver, baseUrl);

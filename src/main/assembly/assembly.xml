@@ -41,6 +41,9 @@
         <dependencySet>
             <outputDirectory>/lib</outputDirectory>
             <useProjectAttachments>true</useProjectAttachments>
+            <includes>
+                <include>*.jar</include>
+            </includes>
         </dependencySet>
     </dependencySets>
 </assembly>

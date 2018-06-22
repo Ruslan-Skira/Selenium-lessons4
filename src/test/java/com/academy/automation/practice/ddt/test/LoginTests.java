@@ -49,7 +49,7 @@ public class LoginTests extends BaseTest {
     @DataProvider(name="userName")
     public Object[][] userNameProvider() {
         return new Object[][] {
-                {"Oleg Afanasiev2"}
+                {"Oleg Afanasiev"}
         };
     }
 

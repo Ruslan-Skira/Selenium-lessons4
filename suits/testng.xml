@@ -2,10 +2,10 @@
         <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="selenium">
+    <parameter name="browser" value="firefox"/>
 <test name="menu">
-    <parameter name="browser" value="chrome"/>
     <classes>
-        <class name="com.academy.automation.practice.ddt.test.AddressTests" />
+        <class name="com.academy.automation.practice.ddt.test.LoginTests" />
     </classes>
 </test>
 </suite>

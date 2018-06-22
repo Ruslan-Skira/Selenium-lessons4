@@ -12,9 +12,10 @@ public class BaseTest {
     protected static final Logger LOG = LogManager.getLogger(BaseTest.class);
     protected final TestManager manager = new TestManager();
 
-    @Parameters("browser")
+
     @BeforeSuite
-    public void setUp(@Optional("chrome")String browser) throws Exception {
+    @Parameters("browser")
+    public void setUp(String browser) throws Exception {
         manager.init(browser);
     }
 

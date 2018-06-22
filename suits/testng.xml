@@ -5,7 +5,7 @@
 <test name="menu">
     <parameter name="browser" value="chrome"/>
     <classes>
-        <class name="com.academy.automation.practice.ddt.test.HomeTests" />
+        <class name="com.academy.automation.practice.ddt.test.AddressTests" />
     </classes>
 </test>
 </suite>

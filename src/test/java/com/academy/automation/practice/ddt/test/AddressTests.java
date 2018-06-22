@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class AddressTest extends BaseTest {
+public class AddressTests extends BaseTest {
 
     @BeforeMethod
     public void prepare() {

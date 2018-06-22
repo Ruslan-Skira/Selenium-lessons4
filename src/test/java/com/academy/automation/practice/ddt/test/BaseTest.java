@@ -15,7 +15,7 @@ public class BaseTest {
 
     @BeforeSuite
     @Parameters("browser")
-    public void setUp(String browser) throws Exception {
+    public void setUp(@Optional("chrome") String browser) throws Exception {
         manager.init(browser);
     }
 

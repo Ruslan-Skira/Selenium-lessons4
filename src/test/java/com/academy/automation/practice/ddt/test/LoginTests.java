@@ -23,7 +23,7 @@ public class LoginTests extends BaseTest {
 
 
     @Test(groups = "login", dataProvider = "userName")
-    public void testSuceessLogin(String userNameExpected) throws Exception {
+    public void testSuccessLogin(String userNameExpected) throws Exception {
         manager.goTo().home();
         manager.session().login();
 

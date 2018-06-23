@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import static com.academy.util.MatcherAssertExt.assertThat;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class LoginTests extends BaseTest {
 
@@ -49,7 +49,7 @@ public class LoginTests extends BaseTest {
     @DataProvider(name="userName")
     public Object[][] userNameProvider() {
         return new Object[][] {
-                {"Oleg Afanasiev"}
+                {"Oleg Afanasiev1"}
         };
     }
 

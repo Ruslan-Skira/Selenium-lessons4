@@ -8,6 +8,8 @@ import org.testng.annotations.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
+import  com.academy.util.MatcherAssertExt;
+
 public class BaseTest {
     protected static final Logger LOG = LogManager.getLogger(BaseTest.class);
     protected final TestManager manager = new TestManager();
@@ -17,6 +19,7 @@ public class BaseTest {
     @Parameters("browser")
     public void setUp(@Optional("chrome") String browser) throws Exception {
         manager.init(browser);
+        MatcherAssertExt.log = LOG;
     }
 
     @AfterSuite(alwaysRun = true)

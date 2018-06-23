@@ -17,6 +17,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 import static com.academy.util.MatcherAssertExt.assertThat;
+import static com.academy.util.MatcherVerifyExt.verifyThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class LoginTests extends BaseTest {
@@ -29,6 +30,7 @@ public class LoginTests extends BaseTest {
 
         String userNameActual = manager.account().getUserName();
         try {
+            //verifyThat(userNameActual, equalTo(userNameExpected));
             assertThat(userNameActual, equalTo(userNameExpected));
 
         } catch (Exception e) {

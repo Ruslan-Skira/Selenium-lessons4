@@ -17,9 +17,9 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 import static com.academy.util.MatcherAssertExt.assertThat;
-import static com.academy.util.MatcherVerifyExt.verifyThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 
+// Тестируем логин
 public class LoginTests extends BaseTest {
 
 

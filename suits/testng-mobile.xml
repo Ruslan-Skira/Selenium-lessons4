@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="mobile">
+    <parameter name="browser" value="chrome"/>
     <test name="subscriber">
-        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.academy.mobile.test.SubscriberTests" />
         </classes>

@@ -13,7 +13,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <test.config>${basedir}/src/main/resources/test.properties</test.config>
+    <automation.config>${basedir}/src/main/resources/automation.properties</automation.config>
     <mobile.config>${basedir}/src/main/resources/mobile.properties</mobile.config>
     <selenium.version>3.12.0</selenium.version>
 </properties>
@@ -109,8 +109,8 @@
                         <configuration>
                             <systemProperties>
                                 <property>
-                                    <name>cfg</name>
-                                    <value>${test.config}</value>
+                                    <name>automation.cfg</name>
+                                    <value>${automation.config}</value>
                                 </property>
                                 <property>
                                     <name>mobile.cfg</name>
@@ -141,8 +141,8 @@
                         <configuration>
                             <systemProperties>
                                 <property>
-                                    <name>cfg</name>
-                                    <value>${test.config}</value>
+                                    <name>automation.cfg</name>
+                                    <value>${automation.config}</value>
                                 </property>
                                 <property>
                                     <name>mobile.cfg</name>

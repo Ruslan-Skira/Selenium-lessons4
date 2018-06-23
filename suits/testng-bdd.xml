@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="selenium">
+    <parameter name="browser" value="chrome"/>
     <test name="menu">
-        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.academy.automation.practice.bdd.LoginTests" />
         </classes>

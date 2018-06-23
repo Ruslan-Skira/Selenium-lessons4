@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="login">
+    <parameter name="browser" value="firefox"/>
     <test name="login firefox">
-        <parameter name="browser" value="firefox"/>
         <groups>
             <run>
                 <include name="db" />

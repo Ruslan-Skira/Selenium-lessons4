@@ -6,7 +6,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 import org.testng.annotations.*;
 
 @CucumberOptions(
-        features = {"src/main/resources/features"},
+        features = {"data"},
         glue = "com.academy.automation.practice.bdd.stepdefs" ,
         format = {
                 "pretty",

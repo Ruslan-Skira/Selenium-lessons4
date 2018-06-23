@@ -29,7 +29,7 @@ public class TestManager {
     }
 
     public void init(String browser) throws IOException {
-        String path = System.getProperty("cfg");
+        String path = System.getProperty("automation.cfg");
         prop.load(new FileInputStream(path));
         baseUrl = prop.getProperty("url");
 

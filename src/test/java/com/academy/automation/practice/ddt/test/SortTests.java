@@ -17,7 +17,7 @@ public class SortTests extends BaseTest {
                 .selectByText("Price: Lowest first");
 
         //System.out.println(dressPage.getFirstPrice());
-        //dressPage.waitForJSandJQueryToLoad();
+        dressPage.waitForJSandJQueryToLoad();
         Assert.assertEquals(dressPage.getFirstPrice(), "$16.40");
     }
 }

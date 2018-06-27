@@ -1,4 +1,4 @@
-package com.academy.api.rest.mobile;
+package com.academy.mobile.api.rest.mobile;
 
 import io.restassured.RestAssured;
 import io.restassured.path.xml.XmlPath;

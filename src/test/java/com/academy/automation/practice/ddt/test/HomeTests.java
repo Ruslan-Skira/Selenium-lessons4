@@ -19,28 +19,6 @@ public class HomeTests {
         WebElement slider = driver.findElement(By.id("homeslider"));
         String[] styles = {"", "", ""};
 
-//        ExpectedCondition<Boolean> rollingComplete =
-//                new ExpectedCondition<Boolean>() {
-//                    @Override
-//                    public Boolean apply(WebDriver driver) {
-//                        // логика условия
-//                        System.out.println(slider.getAttribute("style"));
-//                        for (int i = 0; i < styles.length; i++) {
-//                            if (styles[i].isEmpty()) {
-//                                styles[i] = slider.getAttribute("style");
-//                                return false;
-//                            }
-//                        }
-//
-//                        for (int i = 0; i < styles.length; i++) {
-//                            if (styles[i].equals(slider.getAttribute("style"))) {
-//                                return true;
-//                            }
-//                        }
-//                        return false;
-//                };
-//    };
-
         ExpectedCondition<Boolean> rollingComplete =
                 driver1 -> {
                     // логика условия

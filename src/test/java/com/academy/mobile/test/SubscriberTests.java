@@ -25,6 +25,7 @@ public class SubscriberTests {
 //        Subscribers beforeUI = manager.ui().subscriber().all();
 //        //Subscribers beforeBD = manager.bd().subscriber().all();
 //        //Subscribers beforeHTTP = manager.http().subscriber().all();
+//        //Subscribers beforeWS = manager.ws().subscriber().all();
 //
 //        assertThat(beforeUI.size(), equalTo(beforeBD.size()), equalTo(beforeHTTP.size()));
 //

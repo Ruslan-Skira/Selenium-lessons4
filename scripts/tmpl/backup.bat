@@ -1,5 +1,5 @@
 ::echo off
-    ::set fName=automation-practice-1.0
+    set fName=@artifact@-@version@
     set fExt=.zip
     ::set rootDir=d:\programming\qa\seleniumtest\target
     set rootDir=%HOMEDRIVE%%HOMEPATH%\.jenkins\workspace\automationpractice-03\target

@@ -178,53 +178,22 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!--<plugin>-->
-                        <!--<groupId>org.codehaus.mojo</groupId>-->
-                        <!--<artifactId>-maven-plugin</artifactId>-->
-                        <!--<version>1.0.0</version>-->
-                        <!--<executions>-->
-                            <!--<execution>-->
-                                <!--<phase>prepare-package</phase>-->
-                                <!--<goals>-->
-                                    <!--<goal>read-project-properties</goal>-->
-                                <!--</goals>-->
-                                <!--<configuration>-->
-                                    <!--<delimiters>-->
-                                        <!--<delimiter>@</delimiter>-->
-                                    <!--</delimiters>-->
-                                    <!--<files>-->
-                                        <!--<file>${project.basedir}/data/backup.bat</file>-->
-                                    <!--</files>-->
-                                    <!--<replacements>-->
-                                        <!--<replacement>-->
-                                            <!--<token>artifact</token>-->
-                                            <!--<value>${project.artifactId}</value>-->
-                                        <!--</replacement>-->
-                                        <!--<replacement>-->
-                                            <!--<token>version</token>-->
-                                            <!--<value>${project.version}</value>-->
-                                        <!--</replacement>-->
-                                    <!--</replacements>-->
-                                <!--</configuration>-->
-                            <!--</execution>-->
-                        <!--</executions>-->
-                    <!--</plugin>-->
                     <plugin>
                         <groupId>com.google.code.maven-replacer-plugin</groupId>
                         <artifactId>replacer</artifactId>
                         <version>1.5.3</version>
                         <executions>
                             <execution>
-                                <id>replace-for-documentation</id>
+                                <id>replace-for-scripts</id>
                                 <phase>prepare-package</phase>
                                 <goals>
                                     <goal>replace</goal>
                                 </goals>
                                 <configuration>
                                     <preserveDir>true</preserveDir>
-                                    <basedir>${basedir}/data</basedir>
+                                    <basedir>${basedir}/scripts/tmpl</basedir>
                                     <outputBasedir>${basedir}</outputBasedir>
-                                    <outputDir>src/site</outputDir>
+                                    <outputDir>scripts</outputDir>
                                     <ignoreErrors>true</ignoreErrors>
                                     <regex>false</regex>
                                     <delimiters>

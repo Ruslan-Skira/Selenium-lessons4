@@ -1,11 +1,7 @@
-package com.academy.api.rest.mobile;
+package com.academy.mobile.api.rest.mobile;
 
 import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.config.LogConfig;
-import io.restassured.config.RestAssuredConfig;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
@@ -18,8 +14,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-
-import java.io.PrintStream;
 
 import static io.restassured.RestAssured.config;
 import static io.restassured.RestAssured.given;

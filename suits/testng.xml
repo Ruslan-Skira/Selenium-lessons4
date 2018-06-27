@@ -2,7 +2,7 @@
         <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="selenium">
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
 <test name="menu">
     <classes>
         <class name="com.academy.automation.practice.ddt.test.LoginTests" />
